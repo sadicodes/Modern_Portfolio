@@ -1,0 +1,14 @@
+{
+  "name": "portfolio1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:dist/css"
+  },
+  "author": "Sadi",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "sass": "^1.79.5"
+  }
+}
