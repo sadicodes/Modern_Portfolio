@@ -24,3 +24,31 @@ $background-opacity: 0.7;
 @mixin easeout {
   transition: all 0.5s ease-out;
 }
+
+// Smartphones (320px - 500px)
+@mixin mediaSM {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+// Tablets and small laptops (501px - 768px)
+@mixin mediaMD {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+// Desktops and large laptops (769px - 1440px)
+@mixin mediaLG {
+  @media screen and (min-width: 769px) and (max-width: 1440px) {
+    @content;
+  }
+}
+
+// Wide screens (1441px and above)
+@mixin mediaXL {
+  @media screen and (min-width: 1441px) {
+    @content;
+  }
+}

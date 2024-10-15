@@ -1,0 +1,46 @@
+//wide screen
+@include mediaXL {
+}
+
+//Desktop & Laptops
+@include mediaLG {
+}
+//Tablets & smll laptops
+@include mediaMD {
+  main {
+    h1 {
+      line-height: 5rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .menu-nav {
+    height: 70vh;
+    transform: translate3d(-100px, 0, 0);
+    font-size: 24px;
+  }
+  .menu-branding {
+    height: 30vh;
+    transform: translate3d(100px, 0, 0);
+  }
+  .protrait {
+    background: url(/img/sadimahin1.jpg);
+    width: 150px;
+    height: 150px;
+  }
+}
+//smartphone
+@include mediaSM {
+  main#home h1 {
+    font-size: 4.7rem;
+  }
+}
