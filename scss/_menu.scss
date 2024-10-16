@@ -14,6 +14,11 @@
     margin: 0 0 5px 0;
     background: #fff;
     @include easeout;
+    cursor: pointer;
+    &:hover {
+      background: $secondary-color;
+      @include easeout();
+    }
   }
 
   // Rotate into 'X' with menu lines
@@ -113,7 +118,7 @@
     font-weight: 300;
     text-decoration: none;
     text-transform: uppercase;
-    color: #fff;
+    color: color-switch($primary-color);
     @include easeout;
     &:hover {
       color: $secondary-color;

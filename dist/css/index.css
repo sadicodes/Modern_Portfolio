@@ -12,6 +12,11 @@
   margin: 0 0 5px 0;
   background: #fff;
   transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+.menu-btn .btn-line:hover {
+  background: #eece18;
+  transition: all 0.5s ease-out;
 }
 .menu-btn.close {
   transform: rotate(180deg);
@@ -139,6 +144,10 @@
     width: 150px;
     height: 150px;
   }
+  .about-info {
+    grid-template-areas: "bio-image" "bio" "places" "food" "hobby";
+    grid-template-columns: 1fr;
+  }
 }
 @media screen and (max-width: 600px) {
   main#home h1 {
@@ -209,6 +218,7 @@ header {
 main {
   padding: 4rem;
   height: 100%;
+  min-height: calc(100vh - 20px);
 }
 main .icons {
   margin-top: 1rem;
@@ -225,6 +235,51 @@ main#home {
 }
 main#home h1 {
   margin-top: 20vh;
+}
+
+.about-info {
+  display: grid;
+  grid-template-areas: "bio-image bio bio" "places food hobby";
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+.about-info .bio-image {
+  grid-area: bio-image;
+  height: 240px;
+  width: 240px;
+  border: #eece18 5px solid;
+  border-radius: 50%;
+}
+.about-info .bio {
+  grid-area: bio;
+  font-size: 1.3rem;
+}
+.about-info .places {
+  grid-area: places;
+}
+.about-info .food {
+  grid-area: food;
+}
+.about-info .hobby {
+  grid-area: hobby;
+}
+.about-info .card {
+  background: rgb(80.75, 80.75, 80.75);
+  padding: 1.5rem;
+  border-bottom: #eece18 5px solid;
+  box-shadow: 0 0px 50px -4px #cec040; /* inner white */
+}
+.about-info .Card-Header {
+  color: #fffbfb;
+  font-size: 1.2rem;
+  font-weight: 450;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 15px;
+  background: rgb(93.5, 93.5, 93.5);
+  color: switch-color(#444);
 }
 
 /*# sourceMappingURL=index.css.map */

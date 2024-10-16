@@ -13,7 +13,6 @@
       font-size: 1.5rem;
     }
   }
-
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -37,6 +36,16 @@
     width: 150px;
     height: 150px;
   }
+  .about-info {
+    grid-template-areas:
+      "bio-image"
+      "bio"
+      "places"
+      "food"
+      "hobby";
+    grid-template-columns: 1fr;
+  }
+
 }
 //smartphone
 @include mediaSM {

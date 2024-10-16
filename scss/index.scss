@@ -7,7 +7,7 @@
 body {
   @include background;
   background-color: #444;
-  color: #fff;
+  color: color-switch($primary-color);
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -42,6 +42,7 @@ header {
 main {
   padding: 4rem;
   height: 100%;
+  min-height: calc(100vh - 20px);
   .icons {
     margin-top: 1rem;
     a {
@@ -58,4 +59,54 @@ main {
       margin-top: 20vh;
     }
   }
+}
+
+//about
+.about-info {
+  display: grid;
+  grid-template-areas:
+    "bio-image bio bio"
+    "places food hobby";
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+
+  .bio-image {
+    grid-area: bio-image;
+    height: 240px;
+    width: 240px;
+    border: $secondary-color 5px solid;
+    border-radius: 50%;
+  }
+  .bio {
+    grid-area: bio;
+    font-size: 1.3rem;
+  }
+  .places {
+    grid-area: places;
+  }
+  .food {
+    grid-area: food;
+  }
+  .hobby {
+    grid-area: hobby;
+  }
+  .card {
+    background: lighten($primary-color, 5%);
+    padding: 1.5rem;
+    border-bottom: $secondary-color 5px solid;
+    box-shadow: 0 0px 50px -4px #cec040; /* inner white */ //
+  }
+  .Card-Header {
+    color: #fffbfb;
+    font-size: 1.2rem;
+    font-weight: 450;
+  }
+}
+
+//Fixed Footer
+#main-footer {
+  text-align: center;
+  padding: 15px;
+  background: lighten($primary-color, 10);
+  color: switch-color($primary-color);
 }
