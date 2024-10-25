@@ -1,25 +1,29 @@
-//wide screen
+// Extra-Large Screens
 @include mediaXL {
+  .about-info {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .meetups {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
-//Desktop & Laptops
+// Large Screens (Desktops & Laptops)
 @include mediaLG {
+  .about-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .meetups {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-//Tablets & smll laptops
+
+// Tablets & Small Laptops
 @include mediaMD {
   main {
     h1 {
       line-height: 5rem;
       font-size: 1.5rem;
-    }
-  }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0;
-    &.show {
-      transform: translate3d(0, 0, 0);
     }
   }
   .menu-nav {
@@ -31,25 +35,45 @@
     height: 30vh;
     transform: translate3d(100px, 0, 0);
   }
-  .protrait {
+  .portrait {
     background: url(/img/sadimahin1.jpg);
     width: 150px;
     height: 150px;
   }
   .about-info {
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "bio-image"
       "bio"
       "places"
       "food"
       "hobby";
-    grid-template-columns: 1fr;
+    .card {
+      margin-bottom: 20px;
+      min-height: 300px;
+      width: 100%;
+    }
   }
-
+  .meetups {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-//smartphone
+
+// Smartphones
 @include mediaSM {
   main#home h1 {
     font-size: 4.7rem;
+  }
+  .about-info {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "bio-image"
+      "bio"
+      "places"
+      "food"
+      "hobby";
+  }
+  .meetups {
+    grid-template-columns: 1fr;
   }
 }

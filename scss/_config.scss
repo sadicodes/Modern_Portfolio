@@ -22,7 +22,7 @@ $background-opacity: 0.7;
   }
 }
 @mixin easeout {
-  transition: all 0.5s ease-out;
+  transition: all 0.6s ease-out;
 }
 //Color change
 @function color-switch($color) {
@@ -35,7 +35,7 @@ $background-opacity: 0.7;
 
 //media Query.
 @mixin mediaSM {
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 576px) {
     @content; // Smartphones (320px - 500px)
   }
 }
@@ -49,14 +49,14 @@ $background-opacity: 0.7;
 
 // Desktops and large laptops (769px - 1440px)
 @mixin mediaLG {
-  @media screen and (min-width: 769px) and (max-width: 1440px) {
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
     @content;
   }
 }
 
 // Wide screens (1441px and above)
 @mixin mediaXL {
-  @media screen and (min-width: 1441px) {
+  @media screen and (min-width:1201px) {
     @content;
   }
 }
