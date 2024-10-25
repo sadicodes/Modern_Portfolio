@@ -314,6 +314,31 @@ main#home h1 {
   transition: all 0.6s ease-out;
 }
 
+.boxes {
+  display: flex;
+  width: 70%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 1.5rem;
+  border: 2px solid #fff;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.6s ease-out;
+}
+.boxes:hover {
+  background-color: #eece18;
+  color: #000;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+}
+.boxes span {
+  color: #000;
+}
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 1rem 1rem;
