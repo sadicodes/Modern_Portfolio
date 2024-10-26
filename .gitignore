@@ -1,1 +1,16 @@
+# Node modules
 node_modules
+
+# Build and distribution folders
+dist
+
+# Sass cache files
+.sass-cache
+
+# Environment variables
+.env
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
